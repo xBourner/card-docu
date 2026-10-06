@@ -37,14 +37,13 @@ jobs:
           pip install zensical
 
       - name: Build Documentation
-        working-directory: docs
         run: |
           zensical build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/site
+          path: site
 
   deploy:
     needs: build
