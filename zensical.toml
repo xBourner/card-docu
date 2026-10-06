@@ -1,0 +1,113 @@
+[project]
+site_name = "Card Docs"
+site_description = "Documentation for the custom cards of xBourner for Home Assistant"
+site_url = "https://xbourner.github.io/card-docu/"
+repo_url = "https://github.com/xBourner/card-docu"
+repo_name = "xBourner/card-docu"
+extra_css = ["stylesheet/extra.css", "stylesheet/cards.css"]
+extra_javascript = ["javascripts/hero-animation.js"]
+copyright = "Copyright &copy; <script>document.write(new Date().getFullYear())</script> xBourner"
+
+# Navigation with keys for translation
+nav = [
+  {"Home" = [
+    {"Overview" = "index.md"},
+    {"Getting Started" = "common/index.md"},
+    {"Installation" = "common/installation.md"},
+    {"Resources & YAML" = "common/resources.md"},
+    {"Troubleshooting" = "common/troubleshooting.md"}
+  ]},
+  {"Status Card" = [
+    {"Home" = "status-card/index.md"},
+    {"Installation" = "status-card/installation.md"},
+    {"Configuration" = "status-card/config.md"},
+    {"Customization" = [
+      {"Overview" = "status-card/customization/index.md"},
+      {"Global Appearance" = "status-card/customization/global-appearance.md"},
+      {"Global Actions" = "status-card/customization/global-actions.md"},
+      {"Badge Mode" = "status-card/customization/badge-mode.md"},
+      {"Persons" = "status-card/customization/persons.md"},
+      {"Filters" = "status-card/customization/filters.md"},
+      {"Entities" = "status-card/customization/entities.md"},
+      {"Smart Groups" = "status-card/customization/smart-groups.md"},
+      {"Content" = "status-card/customization/content.md"},
+      {"Domain Items" = "status-card/customization/domain-items.md"},
+      {"Device-Class Items" = "status-card/customization/device-class-items.md"},
+      {"Popup / Dialog" = "status-card/customization/popup-dialog.md"},
+      {"Styles" = "status-card/customization/styles.md"}
+    ]},
+    {"FAQ" = "status-card/faq.md"},
+    {"Projects" = "status-card/projects.md"}
+  ]},
+  {"Header Position" = [
+    {"Home" = "header-position-card/index.md"},
+    {"Installation" = "header-position-card/installation.md"},
+    {"Configuration" = "header-position-card/config.md"}
+  ]},
+  {"Area Card" = [
+    {"Home" = "area-card-plus/index.md"},
+    {"Installation" = "area-card-plus/installation.md"},
+    {"Configuration" = "area-card-plus/config.md"}
+  ]},
+  {"Calendar Card" = [
+    {"Home" = "calendar-card-plus/index.md"},
+    {"Installation" = "calendar-card-plus/installation.md"},
+    {"Configuration" = "calendar-card-plus/config.md"}
+  ]},
+  {"Dynamic Grid" = [
+    {"Home" = "dynamic-grid-card/index.md"},
+    {"Installation" = "dynamic-grid-card/installation.md"},
+    {"Configuration" = "dynamic-grid-card/config.md"}
+  ]},
+  {"Server Card" = [
+    {"Home" = "server-card-plus/index.md"},
+    {"Installation" = "server-card-plus/installation.md"},
+    {"Configuration" = "server-card-plus/config.md"}
+  ]}
+]
+
+[project.theme]
+name = "material"
+custom_dir = "overrides"
+logo = "img/logo.png"
+features = [
+    "navigation.tabs",
+    "navigation.footer",
+    "navigation.top",
+    "navigation.sections",
+    "search.highlight",
+    "toc"
+]
+
+[[project.theme.palette]]
+scheme = "default"
+primary = "light blue"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+
+[[project.theme.palette]]
+scheme = "slate"
+primary = "light blue"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/xBourner"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/discord"
+link = "https://discord.gg/RvwE65hJ"
+
+[project.extra.tags]
+Setup = "setup"
+Customization = "customization"
+FAQ = "faq"
+
+[project.theme.icon.tag]
+default = "lucide/hash"
+setup = "fontawesome/solid/gear"
+customization = "fontawesome/solid/palette"
+faq = "fontawesome/solid/circle-question"
