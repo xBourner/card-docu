@@ -129,9 +129,9 @@ hide:
 <div class="support-block">
   <h2 class="support-heading">Become a sponsor</h2>
   <p class="support-text">
-    By supporting the <strong>xBourner</strong> projects, you help ensure their ongoing
-    development and maintenance. Together, we can build the best dashboard experience
-    for Home Assistant!
+    I develop and maintain all of these cards in my spare time. If you like one of
+    them, consider becoming a sponsor — your support keeps me building new features
+    and fixing things. Thanks a lot for helping me keep these projects alive!
   </p>
   <div class="video-buttons u-btn-group" style="margin-top: 2rem;">
     <a href="https://github.com/sponsors/xBourner" class="u-btn-native u-btn-dark" style="color: hsla(var(--md-hue), 15%, 5%, 1);">
