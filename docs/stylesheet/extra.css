@@ -632,6 +632,11 @@ body:has(.hero-section) .md-container {
   transform: none !important;
 }
 
+/* Single remaining block spans the whole row */
+.support-grid > .support-block:only-child {
+  grid-column: 1 / -1;
+}
+
 .support-heading {
   font-size: 1.8rem !important;
   font-weight: 400 !important;

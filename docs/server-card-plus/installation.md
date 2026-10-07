@@ -44,7 +44,7 @@ Repository** with the category **Dashboard**:
     ```
 
 `/local/` is the alias for `<config>/www/`. See
-[Resources & YAML](../common/resources.md) for details.
+[Resources & YAML](resources.md) for details.
 
 ## Add the card
 

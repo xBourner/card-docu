@@ -19,7 +19,7 @@ hide:
         <div class="highlights-icon-wrapper"><span class="highlights-icon">🧩</span></div>
         <div class="highlights-content">
           <h3>One Documentation</h3>
-          <p>All cards share the same structure: Home, Installation and Configuration – so you always know where to look.</p>
+          <p>All cards share the same structure: Getting Started, Installation, Resources &amp; YAML, Configuration and Troubleshooting – so you always know where to look.</p>
         </div>
       </div>
       <div class="highlights-item reveal">
@@ -51,8 +51,8 @@ hide:
   <div class="showcase-item align-center">
     <h1 class="showcase-title reveal">The Cards</h1>
     <p class="showcase-text reveal">
-      Pick a card to reach its documentation. Every section contains the same pages,
-      so installation and configuration always look familiar.
+      Pick a card to reach its documentation. Every section follows the same structure,
+      so installation and troubleshooting always look familiar.
     </p>
   </div>
 
@@ -125,17 +125,6 @@ hide:
 
 <div class="support-section" markdown="1">
 <div class="support-grid" markdown="1">
-
-<div class="support-block" markdown="1">
-<h2 class="support-heading">New to these cards?</h2>
-
-Start with the shared basics – once you know how one card is installed, all the others work the same way.
-
--   [:material-rocket-launch:{ .support-link-icon } **Getting Started**](common/index.md){ .support-link }
--   [:material-download:{ .support-link-icon } **Installation**](common/installation.md){ .support-link }
--   [:material-lifebuoy:{ .support-link-icon } **Troubleshooting**](common/troubleshooting.md){ .support-link }
-
-</div>
 
 <div class="support-block" markdown="1">
 <h2 class="support-heading">Let's keep in touch</h2>

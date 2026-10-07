@@ -11,15 +11,13 @@ copyright = "Copyright &copy; <script>document.write(new Date().getFullYear())</
 # Navigation with keys for translation
 nav = [
   {"Home" = [
-    {"Overview" = "index.md"},
-    {"Getting Started" = "common/index.md"},
-    {"Installation" = "common/installation.md"},
-    {"Resources & YAML" = "common/resources.md"},
-    {"Troubleshooting" = "common/troubleshooting.md"}
+    {"Overview" = "index.md"}
   ]},
   {"Status Card" = [
     {"Home" = "status-card/index.md"},
+    {"Getting Started" = "status-card/getting-started.md"},
     {"Installation" = "status-card/installation.md"},
+    {"Resources & YAML" = "status-card/resources.md"},
     {"Configuration" = "status-card/config.md"},
     {"Customization" = [
       {"Overview" = "status-card/customization/index.md"},
@@ -37,32 +35,48 @@ nav = [
       {"Styles" = "status-card/customization/styles.md"}
     ]},
     {"FAQ" = "status-card/faq.md"},
-    {"Projects" = "status-card/projects.md"}
+    {"Projects" = "status-card/projects.md"},
+    {"Troubleshooting" = "status-card/troubleshooting.md"}
   ]},
   {"Header Position" = [
     {"Home" = "header-position-card/index.md"},
+    {"Getting Started" = "header-position-card/getting-started.md"},
     {"Installation" = "header-position-card/installation.md"},
-    {"Configuration" = "header-position-card/config.md"}
+    {"Resources & YAML" = "header-position-card/resources.md"},
+    {"Configuration" = "header-position-card/config.md"},
+    {"Troubleshooting" = "header-position-card/troubleshooting.md"}
   ]},
   {"Area Card" = [
     {"Home" = "area-card-plus/index.md"},
+    {"Getting Started" = "area-card-plus/getting-started.md"},
     {"Installation" = "area-card-plus/installation.md"},
-    {"Configuration" = "area-card-plus/config.md"}
+    {"Resources & YAML" = "area-card-plus/resources.md"},
+    {"Configuration" = "area-card-plus/config.md"},
+    {"Troubleshooting" = "area-card-plus/troubleshooting.md"}
   ]},
   {"Calendar Card" = [
     {"Home" = "calendar-card-plus/index.md"},
+    {"Getting Started" = "calendar-card-plus/getting-started.md"},
     {"Installation" = "calendar-card-plus/installation.md"},
-    {"Configuration" = "calendar-card-plus/config.md"}
+    {"Resources & YAML" = "calendar-card-plus/resources.md"},
+    {"Configuration" = "calendar-card-plus/config.md"},
+    {"Troubleshooting" = "calendar-card-plus/troubleshooting.md"}
   ]},
   {"Dynamic Grid" = [
     {"Home" = "dynamic-grid-card/index.md"},
+    {"Getting Started" = "dynamic-grid-card/getting-started.md"},
     {"Installation" = "dynamic-grid-card/installation.md"},
-    {"Configuration" = "dynamic-grid-card/config.md"}
+    {"Resources & YAML" = "dynamic-grid-card/resources.md"},
+    {"Configuration" = "dynamic-grid-card/config.md"},
+    {"Troubleshooting" = "dynamic-grid-card/troubleshooting.md"}
   ]},
   {"Server Card" = [
     {"Home" = "server-card-plus/index.md"},
+    {"Getting Started" = "server-card-plus/getting-started.md"},
     {"Installation" = "server-card-plus/installation.md"},
-    {"Configuration" = "server-card-plus/config.md"}
+    {"Resources & YAML" = "server-card-plus/resources.md"},
+    {"Configuration" = "server-card-plus/config.md"},
+    {"Troubleshooting" = "server-card-plus/troubleshooting.md"}
   ]}
 ]
 
