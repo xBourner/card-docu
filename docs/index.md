@@ -7,6 +7,7 @@ hero_cta_secondary: "→"
 hero_scroll_title: Six cards. One documentation.
 hero_scroll_subtitle: Install, configure and customize every card from a single place.
 hide:
+    - navigation
     - toc
 ---
 
