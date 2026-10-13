@@ -8,7 +8,8 @@ hide:
 
 # Resources & YAML
 
-There is no HACS install for the **Server Card Plus** yet, so every installation is a manual one and registering the resource is always required. Home Assistant has to be told where the JavaScript file lives.
+HACS registers the resource automatically. For a **manual install** of the **Server
+Card Plus**, Home Assistant has to be told where the JavaScript file lives.
 
 ## Register the resource (UI)
 
@@ -42,11 +43,11 @@ resources:
 
 ## Add the card to a dashboard
 
-The **Server Card Plus** is added as a **Manual card** – there is no entry in the card picker:
-
 1. Open your dashboard and click **Edit**.
-2. Click **Add Card** and choose **Manual**.
-3. Enter:
+2. Click **Add Card** and search for **Server Card Plus**.
+3. Configure it in the visual editor.
+
+Or use a **Manual card** with:
 
 ```yaml
 type: custom:server-card-plus

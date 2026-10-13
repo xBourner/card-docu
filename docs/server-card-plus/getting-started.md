@@ -8,46 +8,53 @@ hide:
 
 # Getting Started
 
-**Server Card Plus** is a system monitor overview with auto-detection for the Proxmox VE integration: CPU, RAM, disk temperature and a green/red online-offline dot per node.
+**Server Card Plus** is a system monitor for the Proxmox VE integration: CPU, RAM,
+disk usage and online status for your host, VMs and containers – with three designs
+and optional machine controls.
 
-This page gets you from zero to a working card. The flow is identical for every card in this documentation – but the card is an early prototype, so you install it manually.
-
+This page gets you from zero to a working card. The flow is identical for every card
+in this documentation.
 
 !!! tip "First time here?"
     Start with [Installation](installation.md) – every card section follows the same order, so you always know where to look.
 
 ## Requirements
 
-- Home Assistant **2024.1 or newer**
+- Home Assistant **2026.3 or newer**
+- The **Proxmox VE** integration, set up and providing entities such as
+  `binary_sensor.node_<name>_status`
 - A dashboard in **Lovelace**
-- The [xBourner/server-card-plus](https://github.com/xBourner/server-card-plus) repository – releases may not be published yet, so plan a manual install
 - **Advanced Mode** in your user profile – only needed when you register the resource manually
+- For the optional controls: the integration's **button entities** (start, stop,
+  reboot, shutdown) must be enabled
 
 ## Steps
 
-1. Install the card manually as described in [Installation](installation.md).
-2. Register the [resource](resources.md) – releases may not be published yet, so do it by hand.
-3. Open your dashboard, click **Edit**, add a **Manual card** and enter `type: custom:server-card-plus`.
-4. Configure the card in YAML – see [Configuration](config.md).
+1. Install the card via HACS or manually as described in [Installation](installation.md).
+2. Manual install only: register the [resource](resources.md).
+3. Open your dashboard, click **Edit → Add Card** and search for **Server Card Plus**.
+4. Pick the mode, design and system in the visual editor – see [Configuration](config.md).
 5. Something looks off? Check [Troubleshooting](troubleshooting.md).
 
 <div class="info-grid" markdown="1">
 <div class="info-block" markdown="1">
-<h3>🟢 Status dot per node</h3>
+<h3>🔎 Finds everything</h3>
 
-Read automatically from <code>binary_sensor.node_&lt;name&gt;_status</code> with CPU and RAM bars plus disk temperature chips.
-
-</div>
-<div class="info-block" markdown="1">
-<h3>🧠 Auto-detection</h3>
-
-The dropdown and all entities are detected from your entity IDs – German and English names both work.
+Host, VMs and LXC containers are detected from your entity IDs – German and English
+names both work.
 
 </div>
 <div class="info-block" markdown="1">
-<h3>🧪 Early prototype</h3>
+<h3>🎨 Three designs</h3>
 
-Version 0.1.0 – Proxmox VE only for now, System Monitor, Glances and UniFi are on the roadmap.
+Classic bars, circles or a rack-style LED meter – switch any time in the editor.
+
+</div>
+<div class="info-block" markdown="1">
+<h3>⏯️ Optional controls</h3>
+
+Start, reboot, shut down or stop a machine right from the card, with a confirmation
+tap for anything destructive.
 
 </div>
 </div>

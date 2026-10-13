@@ -115,7 +115,7 @@ hide:
       <span class="card-tile__icon">🖧</span>
       <span class="card-badge card-badge--wip">Prototype</span>
       <h3 class="card-tile__name">Server Card Plus</h3>
-      <p class="card-tile__desc">A system monitor overview with auto-detection for Proxmox VE: CPU, RAM, disk temperature and online status per node.</p>
+      <p class="card-tile__desc">A system monitor for Proxmox VE that finds your host, VMs and containers automatically – three designs, disk temperatures and optional start/stop controls.</p>
       <div class="card-tile__links">
         <a href="server-card-plus/">Documentation</a>
       </div>

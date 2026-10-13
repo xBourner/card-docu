@@ -8,8 +8,8 @@ hide:
 # Installation
 
 !!! warning "Prototype"
-    Server Card Plus is still an early prototype. Use the manual installation –
-    releases may not be published yet.
+    Server Card Plus is still a prototype. If no release is published yet, use the
+    manual installation with the file from `dist/` of the repository.
 
 ## Method 1: HACS (as custom repository)
 
@@ -17,10 +17,12 @@ hide:
 Repository** with the category **Dashboard**:
 
 1. Ensure [HACS](https://hacs.xyz) is installed.
-2. Open HACS → **⋮ → Integrations → ⋮ → Custom repositories**.
+2. Open HACS → **⋮ → Custom repositories**.
 3. Enter `https://github.com/xBourner/server-card-plus` and choose category
    **Dashboard**.
 4. Install the card and clear your browser cache afterwards.
+
+HACS registers the resource for you.
 
 ## Method 2: Manual install
 
@@ -48,11 +50,13 @@ Repository** with the category **Dashboard**:
 
 ## Add the card
 
-Edit your dashboard, click **Add Card** and add a **Manual card** with:
+Edit your dashboard, click **Add Card** and search for **Server Card Plus**. The
+visual editor opens with the first detected system already selected.
+
+Prefer YAML? Add a **Manual card** with:
 
 ```yaml
 type: custom:server-card-plus
-title: Proxmox pve
 node: auto
 ```
 
