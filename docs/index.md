@@ -19,7 +19,7 @@ hide:
         <div class="highlights-icon-wrapper"><span class="highlights-icon">🧩</span></div>
         <div class="highlights-content">
           <h3>One Documentation</h3>
-          <p>All cards share the same structure: Getting Started, Installation, Resources &amp; YAML, Configuration and Troubleshooting – so you always know where to look.</p>
+          <p>All cards share the same structure: Getting Started, Installation, Resources &amp; YAML, Configuration, Customization, FAQ and Troubleshooting – so you always know where to look.</p>
         </div>
       </div>
       <div class="highlights-item reveal">
@@ -52,7 +52,7 @@ hide:
     <h1 class="showcase-title reveal">The Cards</h1>
     <p class="showcase-text reveal">
       Pick a card to reach its documentation. Every section follows the same structure,
-      so installation and troubleshooting always look familiar.
+      so menu and sidebar always look familiar.
     </p>
   </div>
 
@@ -61,7 +61,7 @@ hide:
       <span class="card-tile__icon">🗂️</span>
       <span class="card-badge">Stable</span>
       <h3 class="card-tile__name">Status Card</h3>
-      <p class="card-tile__desc">An automatically generated overview of your areas – smart filters, dynamic groups, badge mode and detail popups.</p>
+      <p class="card-tile__desc">An automatically generated overview of your areas – smart filters, dynamic groups, badge and chip display and detail popups.</p>
       <div class="card-tile__links">
         <a href="status-card/">Documentation</a>
         <a href="https://github.com/xBourner/status-card">GitHub</a>
@@ -105,9 +105,10 @@ hide:
       <span class="card-tile__icon">▦</span>
       <span class="card-badge card-badge--wip">Work in progress</span>
       <h3 class="card-tile__name">Dynamic Grid Card</h3>
-      <p class="card-tile__desc">A flexible column and module grid that nests any Lovelace card plus smart modules for persons, calendars and security.</p>
+      <p class="card-tile__desc">CarPlay-style columns that share the height – any Lovelace card plus smart modules for persons, calendars and security.</p>
       <div class="card-tile__links">
         <a href="dynamic-grid-card/">Documentation</a>
+        <a href="https://github.com/xBourner/dynamic-grid-card">GitHub</a>
       </div>
     </div>
 
@@ -118,6 +119,7 @@ hide:
       <p class="card-tile__desc">A system monitor for Proxmox VE that finds your host, VMs and containers automatically – three designs, disk temperatures and optional start/stop controls.</p>
       <div class="card-tile__links">
         <a href="server-card-plus/">Documentation</a>
+        <a href="https://github.com/xBourner/server-card-plus">GitHub</a>
       </div>
     </div>
   </div>

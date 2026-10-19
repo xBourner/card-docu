@@ -67,5 +67,9 @@ class right out of the box.
 
 ## Next steps
 
+- [Getting Started](getting-started.md)
 - [Installation](installation.md)
 - [Configuration](config.md)
+- [Customization](customization/index.md)
+- [FAQ](faq.md)
+- [Projects](projects.md)

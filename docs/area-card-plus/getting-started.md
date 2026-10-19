@@ -57,4 +57,6 @@ V1 and V2 layouts plus vertical mode let the card match your dashboard style.
 - [Installation](installation.md)
 - [Resources & YAML](resources.md)
 - [Configuration](config.md)
+- [Customization](customization/index.md)
+- [FAQ](faq.md)
 - [Troubleshooting](troubleshooting.md)

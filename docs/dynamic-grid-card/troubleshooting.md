@@ -15,7 +15,7 @@ Most problems come from a stale browser cache or a missing resource. Work throug
 1. Verify the resource is registered with `type: module` ([Resources & YAML](resources.md)).
 2. Check the file actually exists in `config/www` (manual installs) – the browser console shows a **404** if it does not.
 3. Clear the browser cache and refresh (**Ctrl/Cmd + Shift + R**).
-4. The card is not published – confirm you built and deployed the current version (see [Installation](installation.md)).
+4. In HACS, confirm the card is installed and up to date.
 
 ## The card shows "Custom element doesn't exist"
 
@@ -42,15 +42,16 @@ This is always a resource problem:
 
 ## A module never appears
 
-Smart modules (<code>person</code>, <code>calendar</code>, <code>security</code>) only render when they have something to show. Check the entities in **Developer Tools → States** and the condition of the module in [Configuration](config.md).
+Smart modules (<code>person</code>, <code>calendar</code>, <code>security</code>) only render when they have something to show. Check the entities in **Developer Tools → States** and the conditions of the module, see [FAQ](faq.md).
 
 ## HACS does not find the card
 
-That is expected: the **Dynamic Grid Card** has **no HACS repository and no GitHub release** yet. Build it locally as described in [Installation](installation.md) and register the resource manually ([Resources & YAML](resources.md)).
+The card is not in the default HACS store yet. Add it as a **Custom Repository** with category **Dashboard**:
+  `https://github.com/xBourner/dynamic-grid-card`
 
 ## Still stuck?
 
-Open an issue in [xBourner/card-docu](https://github.com/xBourner/card-docu/issues) and include:
+Open an issue in [xBourner/dynamic-grid-card](https://github.com/xBourner/dynamic-grid-card/issues) and include:
 
 - Home Assistant version (**Settings → About**)
 - Card version (HACS or release tag)
@@ -59,4 +60,4 @@ Open an issue in [xBourner/card-docu](https://github.com/xBourner/card-docu/issu
 - A screenshot of the problem
 
 !!! info "Questions get closed"
-    The card is not published yet – please read [Getting Started](getting-started.md) and [Installation](installation.md) first. Issues that only ask a question which is answered in the docs will be closed with a link to this page.
+    Please read the [FAQ](faq.md) first. Issues that only ask a question which is answered in the docs will be closed with a link to this page.

@@ -5,114 +5,44 @@ hide:
   - tags
 ---
 
-# Configuration
+# ⚙️ Configuration & Usage
 
-Once installed, edit your dashboard, click **Add Card** and search for **Area Card
-Plus**. The visual editor guides you through all options – just choose an **Area**
-and the card does the rest.
+Once **Area Card Plus** is installed, pick an area and the card fills itself.
 
-!!! info "Source of truth"
-    The tables below describe the most important options. The visual editor always
-    shows the complete, up-to-date set of settings for your card version.
+!!! info "Main requirement"
+    The card is based on your Home Assistant areas. Assign your devices and entities
+    to their **areas** beforehand – the card only shows what belongs to the area.
 
-## Basic
+---
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `type` | string | `custom:area-card-plus` (required) |
-| `area` | area | The area this card represents (required) |
-| `label` | string | Optional label displayed on the card |
-| `show_active` | boolean | Only show entities that are currently active |
-| `unit_system` | select | Metric / imperial units |
-| `category_filter` | list | Restrict the shown categories |
+## The GUI Editor
 
-## Appearance
+The visual editor is the easiest way to configure the card. No YAML knowledge is required.
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `area_name` | text | Override the area name |
-| `area_name_color` | color | Color of the area name |
-| `area_icon` | icon | Override the area icon |
-| `area_icon_color` | color | Color of the area icon |
-| `display_type` | select | `icon`, `picture`, `icon & picture`, `camera`, `camera & icon` |
-| `layout` | select | `vertical` or `horizontal` (required) |
-| `design` | select | `V1` or `V2` design |
-| `v2_color` | color | Accent color of the V2 design |
-| `mirrored` | boolean | Mirror the layout |
-| `theme` | theme | Theme override for this card |
+1. Open your dashboard and click **Edit Dashboard**.
+2. Click **Add Card**.
+3. Search for **Area Card Plus**.
+4. Choose an **Area** – everything else is optional.
 
-### Camera options
+The editor is split into four tabs:
 
-Only visible when `display_type` contains `camera`:
+| Tab | What you set there |
+|-----|--------------------|
+| **Configuration** | Area, alerts, covers, sensors, domains, custom buttons, popup and hidden entities |
+| **Appearance** | Name, icon, display type (icon, picture, camera), layout, design and theme |
+| **Actions** | Tap, double tap and hold action of the card |
+| **Style** | Custom CSS for every part of the card |
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `camera_view` | select | `auto` or `live` |
-| `camera_mode` | select | `single`, `auto` or `split` |
-| `camera_entity` | entity | Camera to show (mode `single`) |
-| `camera_auto_interval` | number (1–3600) | Rotation interval in seconds (mode `auto`) |
-| `camera_entity_left` / `camera_entity_right` | entity | Both cameras (mode `split`) |
+Every feature is explained in [Customization](customization/index.md).
 
-## Actions
+---
 
-| Option | Description |
-|--------|-------------|
-| `tap_action` | Action on tap (`more-info`, `navigate`, `url`, `perform-action`, `none`) |
-| `double_tap_action` | Action on double tap |
-| `hold_action` | Action on hold |
+## YAML Configuration (For Pros)
 
-## Item classes & colors
+The editor writes exactly the keys shown below, so you can configure visually first
+and then fine-tune in YAML.
 
-Every domain group can be tuned individually:
-
-| Option | Type | Description |
-|--------|------|-------------|
-| `alert_classes` | list | Device classes shown in the alert group |
-| `alert_color` | color | Color of the alert group |
-| `cover_classes` | list | Device classes shown as covers |
-| `cover_color` | color | Color of the cover group |
-| `sensor_classes` | list | Device classes shown as sensors |
-| `sensor_color` | color | Color of the sensor group |
-| `show_sensor_icons` | boolean | Show icons for sensor entries |
-| `wrap_sensor_icons` | boolean | Allow sensor icons to wrap |
-| `toggle_domains` | list | Domains rendered with a toggle |
-| `domain_color` | color | Color of the toggle domain |
-| `customization_alert` / `customization_cover` / `customization_domain` / `customization_sensor` | object | Per-device-class overrides |
-
-### Visibility
-
-| Option | Type | Description |
-|--------|------|-------------|
-| `hidden_entities` | list | Entities hidden from the card |
-| `excluded_entities` | list | Entities excluded from processing |
-| `custom_buttons` | list | Extra buttons pinned onto the card (own icon, entity, position, actions) |
-
-## Styles
-
-The `styles` object accepts CSS overrides for individual parts of the card:
-
-```yaml
-styles:
-  card: "border-radius: 24px;"
-  icon: "font-size: 28px;"
-  name: "font-weight: 700;"
-  domain: "opacity: 0.8;"
-  cover: ""
-  alert: ""
-  sensor: ""
-  image: ""
-  camera: ""
-  sensors: ""
-  thermostat:
-    heat: "#ff5722"
-    cool: "#2196f3"
-    standby: "#9e9e9e"
-```
-
-Raw CSS strings are also available as `css`, `icon_css`, `name_css`, `domain_css`,
-`cover_css`, `alert_css` and `sensor_css`.
-
-## YAML example
+### Basic Example
 
 ```yaml
 type: custom:area-card-plus
@@ -120,12 +50,100 @@ area: living_room
 layout: vertical
 design: V2
 display_type: picture
-show_active: true
+```
+
+### Full YAML Settings
+
+```yaml
+type: custom:area-card-plus
+area: living_room            # the area this card represents (required)
+area_name: Living Room       # override the area name
+area_name_color: blue        # color of the area name
+area_icon: mdi:sofa          # override the area icon
+area_icon_color: amber       # color of the area icon
+display_type: icon & picture # icon, picture, icon & picture, camera, camera & icon
+layout: vertical             # vertical or horizontal (required)
+design: V2                   # V1 or V2
+v2_color: [33, 150, 243]     # accent color of the V2 design (rgb)
+mirrored: false              # mirror the layout
+theme: optional              # theme for this card
+show_active: false           # hide domain buttons without an active entity
+
+# camera (only with display_type camera / camera & icon)
+camera_view: auto            # auto or live
+camera_mode: single          # single, auto or split
+camera_entity: camera.living_room
+camera_auto_interval: 10     # seconds between cameras (mode auto)
+camera_entity_left: camera.one   # mode split
+camera_entity_right: camera.two  # mode split
+
+# actions of the card itself
 tap_action:
+  action: navigate
+  navigation_path: /dashboard-rooms/living-room
+double_tap_action:
+  action: none
+hold_action:
   action: more-info
+
+# alerts, covers and sensors (device classes)
+alert_classes: [motion, window]
+alert_color: red
+cover_classes: [shutter, blind]
+cover_color: purple
+sensor_classes: [temperature, humidity]
+sensor_color: grey
+show_sensor_icons: false
+wrap_sensor_icons: false
+
+# toggle domains
+toggle_domains: [light, switch, fan, climate]
+hidden_toggle_domains: [media_player]  # written by the editor: domains you deselected
+domain_color: amber
+
+# popup
+columns: 4                   # columns in the popup (1-4)
+ungroup_areas: false         # one list instead of groups per domain
+hide_unavailable: false      # hide unavailable entities in the popup
+popup_sort: name             # name or state
+popup_domains: [light, switch, sensor]
+hidden_popup_domains: []     # written by the editor: domains you deselected
+sync_popup_domains: false    # apply popup_domains to domain popups as well
+label: [living]              # only show entities with these labels
+extra_entities:              # entities from other areas shown in the popup
+  - sensor.outdoor_temperature
+
+# visibility
+hidden_entities: [light.led_strip]       # ignored completely
+excluded_entities: [switch.standby]      # in the popup, but not counted on the card
+category_filter: config+diagnostic       # ignore config and/or diagnostic entities
+
+# per item customization
+customization_domain:
+  - type: light
+    icon: mdi:lightbulb-group
+    color: amber
+    tap_action:
+      action: toggle
+customization_alert:
+  - type: motion
+    invert: false
+    color: red
+customization_cover:
+  - type: shutter
+    icon: mdi:window-shutter
+customization_sensor:
+  - type: temperature
+    color: orange
+
+custom_buttons:
+  - entity: lock.front_door
+    icon: mdi:lock
+    position: top-right
+
 styles:
-  card: "border-radius: 20px;"
-  icon: "font-size: 26px;"
+  card: "border-radius: 24px;"
+  icon: "--mdc-icon-size: 40px;"
 ```
 
 !!! tip "Start visual, finish in YAML"

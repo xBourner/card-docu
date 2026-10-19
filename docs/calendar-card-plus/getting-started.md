@@ -57,4 +57,6 @@ Click the card to reveal a detailed, beautifully formatted event list.
 - [Installation](installation.md)
 - [Resources & YAML](resources.md)
 - [Configuration](config.md)
+- [Customization](customization/index.md)
+- [FAQ](faq.md)
 - [Troubleshooting](troubleshooting.md)

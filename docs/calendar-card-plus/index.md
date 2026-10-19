@@ -40,5 +40,9 @@ Want to see the card in action? Check out this showcase and tutorial video
 
 ## Next steps
 
+- [Getting Started](getting-started.md)
 - [Installation](installation.md)
 - [Configuration](config.md)
+- [Customization](customization/index.md)
+- [FAQ](faq.md)
+- [Projects](projects.md)

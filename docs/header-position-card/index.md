@@ -55,5 +55,9 @@ removed again and the stock header returns.
 
 ## Next steps
 
+- [Getting Started](getting-started.md)
 - [Installation](installation.md)
 - [Configuration](config.md)
+- [Customization](customization/index.md)
+- [FAQ](faq.md)
+- [Projects](projects.md)

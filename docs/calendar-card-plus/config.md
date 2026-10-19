@@ -5,84 +5,89 @@ hide:
   - tags
 ---
 
-# Configuration
+# ⚙️ Configuration & Usage
 
-Once installed, edit your dashboard, click **Add Card** and search for **Calendar
-Card Plus**. The visual editor guides you through all options – YAML is optional.
+Once **Calendar Card Plus** is installed, it shows the events of all your calendars
+right away – no setup needed.
 
-## Events & time window
+---
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `type` | string | – | `custom:calendar-card-plus` (required) |
-| `name` | text | – | Title of the card |
-| `upcoming_events` | boolean | `true` | Only show events that are still upcoming |
-| `days` | number | – | Show events for the next *n* days |
-| `hours` | number | – | Add *n* hours to the time window |
-| `minutes` | number | – | Add *n* minutes to the time window |
-| `max_minutes_until_start` | number | – | Fallback window (in minutes) when no `days`/`hours`/`minutes` is set |
-| `exclude_entities` | list | `[]` | Calendar entities to ignore |
-| `show_empty_days` | boolean | `false` | Also render days without events |
+## The GUI Editor
 
-!!! info "Time window"
-    If `days`, `hours` or `minutes` are set, the window is calculated as
-    `days × 1440 + hours × 60 + minutes` minutes. Without them the card shows the
-    next **24 hours** (or the value of `max_minutes_until_start`).
+1. Open your dashboard and click **Edit Dashboard**.
+2. Click **Add Card**.
+3. Search for **Calendar Card Plus**.
+4. Adjust the options – every calendar entity is used by default.
 
-## Display
+The editor has three sections:
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `show_date` | boolean | Show the date of an event |
-| `show_time` | boolean | Show start/end time |
-| `show_duration` | boolean | Show the duration of an event |
-| `show_location` | boolean | Show the event location |
-| `show_divider` | boolean | Divider between events |
-| `show_calendar_name` | boolean | Show which calendar an event belongs to |
-| `show_add_event` | boolean | Show the "add event" button |
-| `show_weekday` | boolean | Show weekday short names |
-| `show_weekday_long` | boolean | Use long weekday names |
-| `icon_show_weekday` | boolean | Show the weekday inside the day icon |
-| `unfold_events` | boolean | Show all events without collapsing |
-| `group_by_date` | boolean | Group events per day |
-| `group_by_date_and_calendar` | boolean | Group per day *and* calendar |
-| `max_lines` | number | Maximum number of visible lines |
-| `dark_mode` | boolean | Force the dark styling |
-| `calendar_icon_color` | color | Color of the calendar icon |
+| Section | What you set there |
+|---------|--------------------|
+| **Configuration** | Unfolded view, divider, add button, grouping, time window and empty days |
+| **Text & Visibility** | Date, time, duration, location, calendar name, weekday and month |
+| **Calendars** | Per calendar: show or hide, read only, color and background color |
 
-## Colors
+Every feature is explained in [Customization](customization/index.md).
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `background_color` | color | Background color of the card |
-| `calendar_colors` | object | Per calendar entity: icon/event color |
-| `calendar_background_colors` | object | Per calendar entity: background color |
+---
 
-```yaml
-calendar_colors:
-  calendar.family: "#03a9f4"
-  calendar.work: "#ff9800"
-```
+## YAML Configuration (For Pros)
 
-## YAML example
+### Basic Example
 
 ```yaml
 type: custom:calendar-card-plus
-name: Upcoming
+unfold_events: true
 upcoming_events: true
 days: 3
-hours: 12
-show_location: true
-show_duration: true
-group_by_date: true
-exclude_entities:
-  - calendar.old_calendar
 ```
 
-## Tips
+### Full YAML Settings
 
-- **No events shown?** Check that the calendar entity is not listed in
-  `exclude_entities` and that it actually contains upcoming events
-  (**Developer Tools → States**).
-- **Wrong language?** Date formats and weekday names follow your Home Assistant
-  language profile.
+```yaml
+type: custom:calendar-card-plus
+name: Upcoming                  # title of the card
+
+# time window
+upcoming_events: true           # look ahead; off = only the rest of today
+days: 3                         # look-ahead days
+hours: 12                       # look-ahead hours
+minutes: 0                      # look-ahead minutes
+max_minutes_until_start: 1440   # look-ahead in minutes if days/hours/minutes are not set
+show_empty_days: false          # show days without events
+empty_text: No events           # text for empty days
+
+# layout
+unfold_events: true             # list all events instead of the compact view
+max_lines: 5                    # max. events in the unfolded card (0 = all)
+show_divider: true              # divider between events
+group_by_date: false            # one group per day
+group_by_date_and_calendar: false  # one group per day and calendar
+show_add_event: true            # "add event" button
+dark_mode: false                # dark styling of the card
+
+# text & visibility
+show_date: true
+show_time: true
+show_duration: false
+show_location: true
+show_calendar_name: false
+show_weekday: true              # weekday in the event line
+show_weekday_long: false        # Monday instead of Mon
+icon_show_weekday: false        # icon shows the weekday, the line the month
+
+# colors
+calendar_icon_color: red        # color of all calendar icons
+background_color: [30, 30, 30]  # card background
+calendar_colors:                # per calendar
+  calendar.family: "#03a9f4"
+  calendar.work: "#ff9800"
+calendar_background_colors:
+  calendar.work: "rgba(255, 152, 0, 0.1)"
+
+# calendars
+exclude_entities:               # calendars that are not shown
+  - calendar.holidays
+read_only_calendars:            # no add, edit or delete for these
+  - calendar.work
+```

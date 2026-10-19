@@ -23,7 +23,7 @@ nav = [
       {"Overview" = "status-card/customization/index.md"},
       {"Global Appearance" = "status-card/customization/global-appearance.md"},
       {"Global Actions" = "status-card/customization/global-actions.md"},
-      {"Badge Mode" = "status-card/customization/badge-mode.md"},
+      {"Display Mode" = "status-card/customization/display-mode.md"},
       {"Persons" = "status-card/customization/persons.md"},
       {"Filters" = "status-card/customization/filters.md"},
       {"Entities" = "status-card/customization/entities.md"},
@@ -38,20 +38,26 @@ nav = [
     {"Projects" = "status-card/projects.md"},
     {"Troubleshooting" = "status-card/troubleshooting.md"}
   ]},
-  {"Header Position" = [
-    {"Home" = "header-position-card/index.md"},
-    {"Getting Started" = "header-position-card/getting-started.md"},
-    {"Installation" = "header-position-card/installation.md"},
-    {"Resources & YAML" = "header-position-card/resources.md"},
-    {"Configuration" = "header-position-card/config.md"},
-    {"Troubleshooting" = "header-position-card/troubleshooting.md"}
-  ]},
   {"Area Card" = [
     {"Home" = "area-card-plus/index.md"},
     {"Getting Started" = "area-card-plus/getting-started.md"},
     {"Installation" = "area-card-plus/installation.md"},
     {"Resources & YAML" = "area-card-plus/resources.md"},
     {"Configuration" = "area-card-plus/config.md"},
+    {"Customization" = [
+      {"Overview" = "area-card-plus/customization/index.md"},
+      {"Appearance" = "area-card-plus/customization/appearance.md"},
+      {"Camera" = "area-card-plus/customization/camera.md"},
+      {"Actions" = "area-card-plus/customization/actions.md"},
+      {"Domains" = "area-card-plus/customization/domains.md"},
+      {"Alerts, Covers & Sensors" = "area-card-plus/customization/device-class-items.md"},
+      {"Custom Buttons" = "area-card-plus/customization/custom-buttons.md"},
+      {"Popup / Dialog" = "area-card-plus/customization/popup-dialog.md"},
+      {"Visibility" = "area-card-plus/customization/visibility.md"},
+      {"Styles" = "area-card-plus/customization/styles.md"}
+    ]},
+    {"FAQ" = "area-card-plus/faq.md"},
+    {"Projects" = "area-card-plus/projects.md"},
     {"Troubleshooting" = "area-card-plus/troubleshooting.md"}
   ]},
   {"Calendar Card" = [
@@ -60,6 +66,16 @@ nav = [
     {"Installation" = "calendar-card-plus/installation.md"},
     {"Resources & YAML" = "calendar-card-plus/resources.md"},
     {"Configuration" = "calendar-card-plus/config.md"},
+    {"Customization" = [
+      {"Overview" = "calendar-card-plus/customization/index.md"},
+      {"Time Window" = "calendar-card-plus/customization/time-window.md"},
+      {"Layout" = "calendar-card-plus/customization/layout.md"},
+      {"Text & Visibility" = "calendar-card-plus/customization/text-visibility.md"},
+      {"Calendars & Colors" = "calendar-card-plus/customization/calendars.md"},
+      {"Events & Popup" = "calendar-card-plus/customization/events-popup.md"}
+    ]},
+    {"FAQ" = "calendar-card-plus/faq.md"},
+    {"Projects" = "calendar-card-plus/projects.md"},
     {"Troubleshooting" = "calendar-card-plus/troubleshooting.md"}
   ]},
   {"Dynamic Grid" = [
@@ -68,6 +84,15 @@ nav = [
     {"Installation" = "dynamic-grid-card/installation.md"},
     {"Resources & YAML" = "dynamic-grid-card/resources.md"},
     {"Configuration" = "dynamic-grid-card/config.md"},
+    {"Customization" = [
+      {"Overview" = "dynamic-grid-card/customization/index.md"},
+      {"Columns & Layout" = "dynamic-grid-card/customization/columns-layout.md"},
+      {"Card Modules" = "dynamic-grid-card/customization/card-modules.md"},
+      {"Smart Modules" = "dynamic-grid-card/customization/smart-modules.md"},
+      {"Conditions" = "dynamic-grid-card/customization/conditions.md"}
+    ]},
+    {"FAQ" = "dynamic-grid-card/faq.md"},
+    {"Projects" = "dynamic-grid-card/projects.md"},
     {"Troubleshooting" = "dynamic-grid-card/troubleshooting.md"}
   ]},
   {"Server Card" = [
@@ -76,7 +101,34 @@ nav = [
     {"Installation" = "server-card-plus/installation.md"},
     {"Resources & YAML" = "server-card-plus/resources.md"},
     {"Configuration" = "server-card-plus/config.md"},
+    {"Customization" = [
+      {"Overview" = "server-card-plus/customization/index.md"},
+      {"Designs" = "server-card-plus/customization/designs.md"},
+      {"Thresholds & Colors" = "server-card-plus/customization/thresholds-colors.md"},
+      {"Disk Temperatures" = "server-card-plus/customization/disk-temperatures.md"},
+      {"Controls" = "server-card-plus/customization/controls.md"},
+      {"Dashboard Mode" = "server-card-plus/customization/dashboard-mode.md"}
+    ]},
+    {"FAQ" = "server-card-plus/faq.md"},
+    {"Projects" = "server-card-plus/projects.md"},
     {"Troubleshooting" = "server-card-plus/troubleshooting.md"}
+  ]},
+  {"Header Position" = [
+    {"Home" = "header-position-card/index.md"},
+    {"Getting Started" = "header-position-card/getting-started.md"},
+    {"Installation" = "header-position-card/installation.md"},
+    {"Resources & YAML" = "header-position-card/resources.md"},
+    {"Configuration" = "header-position-card/config.md"},
+    {"Customization" = [
+      {"Overview" = "header-position-card/customization/index.md"},
+      {"Design" = "header-position-card/customization/design.md"},
+      {"Breakpoints" = "header-position-card/customization/breakpoints.md"},
+      {"Global Mode" = "header-position-card/customization/global-mode.md"},
+      {"Behaviour" = "header-position-card/customization/behaviour.md"}
+    ]},
+    {"FAQ" = "header-position-card/faq.md"},
+    {"Projects" = "header-position-card/projects.md"},
+    {"Troubleshooting" = "header-position-card/troubleshooting.md"}
   ]}
 ]
 

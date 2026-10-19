@@ -70,7 +70,7 @@ Available Device Classes are:
 | **Invert State** | Show "off" instead of "on" (e.g. for windows: closed instead of open) |
 | **Enable Total Entities** | Show all entities instead of "on" entities only |
 | **Enable Total Number** | Show total count (e.g. 1/7 windows open) |
-| **Badge Mode** | Compact display: icon + badge count only |
+| **Display Mode** | Standard, badge or chip – overrides the card display mode |
 | **Badge Color** | Set individual badge color |
 | **Tap Action** | Action on tap (toggle, more-info, navigate, url, perform-action, none) |
 | **Hold Action** | Action on hold |
@@ -92,5 +92,5 @@ content:
 customization:
   - type: binary_sensor - motion
     icon: mdi:motion-sensor
-    badge_mode: true
+    display_mode: badge
 ```

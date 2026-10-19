@@ -40,6 +40,7 @@ assign your devices to areas and let the card handle the rest.
 
 ## Next steps
 
+- [Getting Started](getting-started.md)
 - [Installation](installation.md)
 - [Configuration](config.md)
 - [Customization](customization/index.md)

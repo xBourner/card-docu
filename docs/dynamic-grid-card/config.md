@@ -5,164 +5,84 @@ hide:
   - tags
 ---
 
-# Configuration
+# ⚙️ Configuration & Usage
 
-!!! warning "Development state"
-    The option names below reflect the current development version of the card.
+Once **Dynamic Grid Card** is installed, you build the grid column by column.
 
-## Card options
+!!! warning "Work in progress"
+    The card has no release yet. The option names below reflect the current version
+    on GitHub and may still change.
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `type` | string | `custom:dynamic-grid-card` (required) |
-| `header` | text | Heading of the grid |
-| `card_height` | text | Height of the card, e.g. `600px` or `85vh` (default: auto) |
-| `columns` | list | List of columns, each with a `modules` list |
+---
 
-```yaml
-type: custom:dynamic-grid-card
-header: My Dashboard
-card_height: 600px
-columns:
-  - modules: []
-  - modules: []
-```
+## The GUI Editor
 
-## Modules
+1. Open your dashboard and click **Edit Dashboard**.
+2. Click **Add Card**.
+3. Search for **Dynamic Grid Card**.
+4. Set a **Header** and the **Card Height**.
+5. Add columns, then add modules to every column – a card, a preset or a smart module.
 
-Every column contains modules. There are two kinds:
+Columns and modules can be reordered by drag & drop. Every module opens its own
+editor for the card, the smart module options, the height and the conditions.
 
-| `type` | Purpose |
-|--------|---------|
-| `card` | Wraps any regular Lovelace card (`card:`) |
-| `smart` | A built-in smart module (`module_type:` + `module_config:`) |
+Every part is explained in [Customization](customization/index.md).
 
-### Common module options
+---
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `type` | `card` \| `smart` | Kind of module |
-| `height` | text | Fixed height (e.g. `200px`) |
-| `flex` | `1` | Grow to fill the available space |
-| `conditions` | list | Show the module only if all conditions match |
+## YAML Configuration (For Pros)
 
-Conditions are evaluated against the Home Assistant state machine:
-
-```yaml
-conditions:
-  - entity: light.kitchen
-    state: "on"
-  - entity: binary_sensor.door
-    state_not: "open"
-```
-
-### Card modules
-
-```yaml
-- type: card
-  card:
-    type: entities
-    title: Lights
-    entities:
-      - light.kitchen
-      - light.hallway
-```
-
-Any Lovelace card type works: `entities`, `tile`, `glance`, `markdown`,
-`custom:*`, …
-
-## Smart modules
-
-| `module_type` | Renders |
-|---------------|---------|
-| `person` | Persons with home/away state |
-| `calendar` | Upcoming calendar events |
-| `security` | Security devices (doors, windows, cameras) |
-
-### `person`
-
-| Option | Type | Description |
-|--------|------|-------------|
-| `include_entities` | list | Only show these persons (default: all) |
-| `show_only_home` | boolean | Only show persons that are at home |
-| `use_grayscale` | boolean | Render persons that are away in grayscale |
-| `show_badge` | boolean | Show the state badge |
-
-```yaml
-- type: smart
-  module_type: person
-  module_config:
-    show_only_home: true
-    show_badge: true
-```
-
-### `calendar`
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `include_entities` | list | all | Only show these calendars |
-| `show_all` | boolean | `false` | Also show past events |
-| `max_minutes_until_start` | number | `60` | Only show events starting within *n* minutes |
-
-```yaml
-- type: smart
-  module_type: calendar
-  module_config:
-    max_minutes_until_start: 120
-```
-
-### `security`
-
-| Option | Type | Description |
-|--------|------|-------------|
-| `exclude_groups` | list | Security groups to hide |
-| `exclude_entities` | list | Entities to hide |
-
-```yaml
-- type: smart
-  module_type: security
-  module_config:
-    exclude_groups:
-      - camera
-```
-
-## Full example
+### Basic Example
 
 ```yaml
 type: custom:dynamic-grid-card
 header: Home
-card_height: 85vh
+card_height: 600px
 columns:
   - modules:
+      - card:
+          type: weather-forecast
+          entity: weather.forecast_home
+  - modules:
       - type: smart
-        module_type: person
-        module_config:
-          show_only_home: true
+        module_type: calendar
+```
+
+### Full YAML Settings
+
+```yaml
+type: custom:dynamic-grid-card
+header: Home                 # title of the card
+card_height: 85vh            # height of the whole card, e.g. 600px or 85vh
+columns:                     # one entry per column
+  - modules:                 # modules of the column, top to bottom
+      - card:                # any Lovelace card
+          type: media-control
+          entity: media_player.living_room
+        height: 200px        # fixed height instead of flex
+        min_height: 120px    # never smaller than this
+        conditions:          # show only if all conditions match
+          - entity: media_player.living_room
+            state: playing
+      - type: smart          # a smart module
+        module_type: person  # person, calendar or security
+        module_config:       # options of the smart module
+          show_only_home: false
+          use_grayscale: true
           show_badge: true
-      - type: card
-        card:
-          type: glance
-          entities:
-            - sun.sun
+        flex: "1"            # share of the free height
   - modules:
       - type: smart
         module_type: calendar
         module_config:
-          max_minutes_until_start: 60
-      - type: card
-        conditions:
-          - entity: light.kitchen
-            state: "on"
-        card:
-          type: tile
-          entity: light.kitchen
+          include_entities: [calendar.family]
+          max_minutes_until_start: 120
+          show_all: false
+        flex: "1"
+      - type: smart
+        module_type: security
+        module_config:
+          exclude_groups: [motion]
+          exclude_entities: [binary_sensor.garage_window]
+        flex: "2"
 ```
-
-## Editor
-
-The visual editor shows:
-
-1. **Header** and **Card Height** at the top.
-2. **Columns Configuration** – add, remove and reorder columns via drag & drop.
-3. Per column: add, remove and reorder **modules**, switch between *card* and
-   *smart*, edit `module_config`, `height` / `flex` and **conditions**.

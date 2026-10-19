@@ -41,7 +41,7 @@ The card reads the entities assigned to your Home Assistant areas – assign you
 <div class="info-block" markdown="1">
 <h3>🧩 Deep customization</h3>
 
-Badge mode, smart groups, persons, filters, styles and popup dialogs are documented in the [Customization](customization/index.md) section.
+Display modes, smart groups, persons, filters, styles and popup dialogs are documented in the [Customization](customization/index.md) section.
 
 </div>
 <div class="info-block" markdown="1">

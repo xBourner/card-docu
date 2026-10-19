@@ -65,3 +65,6 @@ unavailable values are shown as **–**, never as 0 %.
 - [Getting Started](getting-started.md)
 - [Installation](installation.md)
 - [Configuration](config.md)
+- [Customization](customization/index.md)
+- [FAQ](faq.md)
+- [Projects](projects.md)

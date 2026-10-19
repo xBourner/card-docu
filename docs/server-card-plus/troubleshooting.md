@@ -103,4 +103,4 @@ Open an issue in [xBourner/server-card-plus](https://github.com/xBourner/server-
 - A screenshot of the problem
 
 !!! info "Questions get closed"
-    Please read [Getting Started](getting-started.md) and [Configuration](config.md) first. Issues that only ask a question which is answered in the docs will be closed with a link to this page.
+    Please read the [FAQ](faq.md) first. Issues that only ask a question which is answered in the docs will be closed with a link to this page.

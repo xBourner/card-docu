@@ -57,4 +57,6 @@ Everything is configurable visually – YAML is optional.
 - [Installation](installation.md)
 - [Resources & YAML](resources.md)
 - [Configuration](config.md)
+- [Customization](customization/index.md)
+- [FAQ](faq.md)
 - [Troubleshooting](troubleshooting.md)
