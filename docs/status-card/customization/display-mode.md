@@ -17,7 +17,7 @@ Choose how the items are displayed. `standard` is the default.
 - **Square:** with `square: true`, chips get rounded corners instead of a full pill
 - **Scrolling:** chips scroll sideways like the other display modes; `no_scroll: true` wraps them into rows
 
-!!! warning "Breaking change in 4.0"
+!!! warning "Breaking change in 3.4"
     `badge_mode: true` was removed. Use `display_mode: badge` instead, on the card and per item.
 
 <img class="doc-img-responsive" src="../img/badge_mode.png" alt="Badge Design">

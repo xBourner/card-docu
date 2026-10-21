@@ -4,17 +4,10 @@ title: Home
 
 # Dynamic Grid Card
 
-<span class="card-badge card-badge--wip">Work in progress</span>
-
 **Dynamic Grid Card** is a custom card for Home Assistant dashboards, inspired by the
 Apple CarPlay dashboard. It arranges cards in columns that share the available height,
 and modules can hide themselves when they have nothing to show – the remaining modules
 grow into the free space.
-
-!!! warning "Status"
-    The card is on [GitHub](https://github.com/xBourner/dynamic-grid-card) and can be
-    installed as a HACS **custom repository**. There is no release yet, so option names
-    may still change.
 
 ## Concepts
 

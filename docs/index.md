@@ -103,7 +103,7 @@ hide:
 
     <div class="card-tile reveal" style="transition-delay: 0.25s;">
       <span class="card-tile__icon">▦</span>
-      <span class="card-badge card-badge--wip">Work in progress</span>
+      <span class="card-badge">Stable</span>
       <h3 class="card-tile__name">Dynamic Grid Card</h3>
       <p class="card-tile__desc">CarPlay-style columns that share the height – any Lovelace card plus smart modules for persons, calendars and security.</p>
       <div class="card-tile__links">
@@ -114,7 +114,7 @@ hide:
 
     <div class="card-tile reveal" style="transition-delay: 0.3s;">
       <span class="card-tile__icon">🖧</span>
-      <span class="card-badge card-badge--wip">Prototype</span>
+      <span class="card-badge">Stable</span>
       <h3 class="card-tile__name">Server Card Plus</h3>
       <p class="card-tile__desc">A system monitor for Proxmox VE that finds your host, VMs and containers automatically – three designs, disk temperatures and optional start/stop controls.</p>
       <div class="card-tile__links">
@@ -162,7 +162,7 @@ hide:
 
 <ul class="support-links" markdown="1">
   <li markdown="1">[:simple-github:{ .support-link-icon } All projects on **GitHub**](https://github.com/xBourner){ .support-link }</li>
-  <li markdown="1">[:simple-discord:{ .support-link-icon } **Discord** community](https://discord.gg/RvwE65hJ){ .support-link }</li>
+  <li markdown="1">[:simple-discord:{ .support-link-icon } **Discord** community](https://discord.gg/RfVx7hmZD3){ .support-link }</li>
   <li markdown="1" style="margin-top: 1.5rem;">[:simple-paypal:{ .support-link-icon } **PayPal**](https://www.paypal.me/gibgas123){ .support-link }</li>
   <li markdown="1">[:simple-buymeacoffee:{ .support-link-icon } **Buy Me a Coffee**](https://www.buymeacoffee.com/bourner){ .support-link }</li>
   <li markdown="1">[:simple-githubsponsors:{ .support-link-icon } **GitHub Sponsors**](https://github.com/sponsors/xBourner){ .support-link .support-link-nowrap }</li>

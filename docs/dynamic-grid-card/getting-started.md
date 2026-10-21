@@ -46,9 +46,9 @@ Each column holds modules: any Lovelace card or a smart module (<code>person</co
 
 </div>
 <div class="info-block" markdown="1">
-<h3>⚠️ Work in progress</h3>
+<h3>📰 Release Notes</h3>
 
-No release yet – option names may still change until the first version.
+What is new in the current version: see [Release Notes](release-notes.md).
 
 </div>
 </div>

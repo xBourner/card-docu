@@ -9,7 +9,7 @@ the Proxmox VE integration. It detects your host, every VM and every LXC contain
 automatically and shows CPU, RAM, disk usage and online status, optionally with disk
 temperatures and buttons to start, reboot, shut down or stop a machine.
 
-!!! info "Status: prototype (v0.3.0)"
+!!! info "Proxmox VE"
     The card currently targets **Proxmox VE**. Further sources (System Monitor,
     Glances, …) are on the roadmap.
 

@@ -9,10 +9,6 @@ hide:
 
 Once **Dynamic Grid Card** is installed, you build the grid column by column.
 
-!!! warning "Work in progress"
-    The card has no release yet. The option names below reflect the current version
-    on GitHub and may still change.
-
 ---
 
 ## The GUI Editor

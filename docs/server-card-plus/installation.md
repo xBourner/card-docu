@@ -7,10 +7,6 @@ hide:
 
 # Installation
 
-!!! warning "Prototype"
-    Server Card Plus is still a prototype. If no release is published yet, use the
-    manual installation with the file from `dist/` of the repository.
-
 ## Method 1: HACS (as custom repository)
 
 `hacs.json` is included in the repository, so the card can be added as a **Custom

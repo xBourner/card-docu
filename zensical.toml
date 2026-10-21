@@ -36,7 +36,8 @@ nav = [
     ]},
     {"FAQ" = "status-card/faq.md"},
     {"Projects" = "status-card/projects.md"},
-    {"Troubleshooting" = "status-card/troubleshooting.md"}
+    {"Troubleshooting" = "status-card/troubleshooting.md"},
+    {"Release Notes" = "status-card/release-notes.md"}
   ]},
   {"Area Card" = [
     {"Home" = "area-card-plus/index.md"},
@@ -58,7 +59,8 @@ nav = [
     ]},
     {"FAQ" = "area-card-plus/faq.md"},
     {"Projects" = "area-card-plus/projects.md"},
-    {"Troubleshooting" = "area-card-plus/troubleshooting.md"}
+    {"Troubleshooting" = "area-card-plus/troubleshooting.md"},
+    {"Release Notes" = "area-card-plus/release-notes.md"}
   ]},
   {"Calendar Card" = [
     {"Home" = "calendar-card-plus/index.md"},
@@ -76,7 +78,8 @@ nav = [
     ]},
     {"FAQ" = "calendar-card-plus/faq.md"},
     {"Projects" = "calendar-card-plus/projects.md"},
-    {"Troubleshooting" = "calendar-card-plus/troubleshooting.md"}
+    {"Troubleshooting" = "calendar-card-plus/troubleshooting.md"},
+    {"Release Notes" = "calendar-card-plus/release-notes.md"}
   ]},
   {"Dynamic Grid" = [
     {"Home" = "dynamic-grid-card/index.md"},
@@ -93,7 +96,8 @@ nav = [
     ]},
     {"FAQ" = "dynamic-grid-card/faq.md"},
     {"Projects" = "dynamic-grid-card/projects.md"},
-    {"Troubleshooting" = "dynamic-grid-card/troubleshooting.md"}
+    {"Troubleshooting" = "dynamic-grid-card/troubleshooting.md"},
+    {"Release Notes" = "dynamic-grid-card/release-notes.md"}
   ]},
   {"Server Card" = [
     {"Home" = "server-card-plus/index.md"},
@@ -111,7 +115,8 @@ nav = [
     ]},
     {"FAQ" = "server-card-plus/faq.md"},
     {"Projects" = "server-card-plus/projects.md"},
-    {"Troubleshooting" = "server-card-plus/troubleshooting.md"}
+    {"Troubleshooting" = "server-card-plus/troubleshooting.md"},
+    {"Release Notes" = "server-card-plus/release-notes.md"}
   ]},
   {"Header Position" = [
     {"Home" = "header-position-card/index.md"},
