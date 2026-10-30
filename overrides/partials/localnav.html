@@ -1,0 +1,31 @@
+{#- Card navigation under the global bar: card name, its main pages and the install action -#}
+{% if page.ancestors %}
+  {% set top = page.ancestors | last %}
+  {% set _ = namespace(home = none, install = none, links = [], product = none) %}
+  {% for child in top.children %}
+    {% set url = child.url if not child.children else (child.children | first).url %}
+    {% if child.title == "Home" %}
+      {% set _.home = url %}
+      {% if child.meta and child.meta.product %}{% set _.product = child.meta.product %}{% endif %}
+    {% elif child.title == "Installation" %}
+      {% set _.install = url %}
+    {% endif %}
+    {% if child.title in ["Getting Started", "Configuration", "Customization", "FAQ", "Release Notes"] %}
+      {% set _.links = _.links + [(child.title, url, child.active)] %}
+    {% endif %}
+  {% endfor %}
+  <nav class="rd-localnav" aria-label="{{ top.title }}">
+    <div class="rd-localnav__inner">
+      <a class="rd-localnav__title" href="{{ _.home | url }}">{{ page.meta.product or _.product or top.title }}</a>
+      <ul class="rd-localnav__links">
+        <li><a href="{{ _.home | url }}" class="rd-localnav__link{% if page.title == 'Home' %} rd-localnav__link--active{% endif %}">Overview</a></li>
+        {% for title, url, active in _.links %}
+          <li><a href="{{ url | url }}" class="rd-localnav__link{% if active %} rd-localnav__link--active{% endif %}">{{ title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% if _.install %}
+        <a class="rd-button rd-button--small" href="{{ _.install | url }}">Install</a>
+      {% endif %}
+    </div>
+  </nav>
+{% endif %}

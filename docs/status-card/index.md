@@ -1,5 +1,20 @@
 ---
 title: Home
+hide:
+  - navigation
+  - toc
+product: Status Card
+tagline: "Everything that's on. At a glance."
+repo: https://github.com/xBourner/status-card
+stage:
+  - src: img/cards/status/status-card-light.png
+    alt: "Status Card in the light theme"
+    label: "Light"
+    field: light
+  - src: img/cards/status/status-card-dark.png
+    alt: "Status Card in the dark theme"
+    label: "Dark"
+    field: dark
 ---
 
 # Status Card
@@ -15,12 +30,6 @@ assign your devices to areas and let the card handle the rest.
 !!! info "Main requirement"
     The card is based on your Home Assistant areas. Assign your relevant devices
     and entities to their **areas** beforehand for the card to work.
-
-<p align="center">
-  <img width="49%" alt="Status Card light theme" src="./img/status-card-light.png">
-&nbsp;
-  <img width="49%" alt="Status Card dark theme" src="./img/status-card-dark.png">
-</p>
 
 ## Features
 

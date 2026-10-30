@@ -1,5 +1,12 @@
 ---
 title: Home
+hide:
+  - navigation
+  - toc
+product: Dynamic Grid Card
+tagline: "Columns that make room."
+repo: https://github.com/xBourner/dynamic-grid-card
+stage_demo: grid
 ---
 
 # Dynamic Grid Card

@@ -1,5 +1,20 @@
 ---
 title: Home
+hide:
+  - navigation
+  - toc
+product: Header Position Card
+tagline: "Navigation where your thumb is."
+repo: https://github.com/xBourner/header-position-card
+stage:
+  - src: img/cards/header/bottom-navbar.png
+    alt: "Navigation bar at the bottom of a dashboard"
+    label: "At the bottom"
+    field: light
+  - src: img/cards/header/navbar-alignment.png
+    alt: "Aligned navigation bar"
+    label: "Aligned"
+    field: light
 ---
 
 # Header Position Card
@@ -14,14 +29,6 @@ much better overall dashboard experience.
 *(Shoutout to [javawizard](https://github.com/javawizard/ha-navbar-position) who came
 up with the original idea. I applied several modifications and a GUI editor to make it
 significantly easier and more robust to work with.)*
-
-<p align="center">
-  <img alt="Bottom Navigation Bar" src="https://github.com/user-attachments/assets/4d18ce72-8791-4a8a-99b4-b978b5f5afe2">
-</p>
-
-<p align="center">
-  <img alt="Navbar Alignment" src="https://github.com/user-attachments/assets/d1347392-0844-457e-9f36-f177f411e76c">
-</p>
 
 ## Features
 

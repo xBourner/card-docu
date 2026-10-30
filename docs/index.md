@@ -66,6 +66,7 @@ hide:
         <a href="status-card/">Documentation</a>
         <a href="https://github.com/xBourner/status-card">GitHub</a>
       </div>
+      <img class="card-tile__shot" src="img/cards/status/status-card-dark.png" alt="Status Card" loading="lazy">
     </div>
 
     <div class="card-tile reveal" style="transition-delay: 0.1s;">
@@ -77,6 +78,7 @@ hide:
         <a href="header-position-card/">Documentation</a>
         <a href="https://github.com/xBourner/header-position-card">GitHub</a>
       </div>
+      <img class="card-tile__shot" src="img/cards/header/bottom-navbar.png" alt="Header Position Card" loading="lazy">
     </div>
 
     <div class="card-tile reveal" style="transition-delay: 0.15s;">
@@ -88,6 +90,7 @@ hide:
         <a href="area-card-plus/">Documentation</a>
         <a href="https://github.com/xBourner/area-card-plus">GitHub</a>
       </div>
+      <img class="card-tile__shot" src="img/cards/area/area-single-dark.png" alt="Area Card Plus" loading="lazy">
     </div>
 
     <div class="card-tile reveal" style="transition-delay: 0.2s;">
@@ -99,6 +102,7 @@ hide:
         <a href="calendar-card-plus/">Documentation</a>
         <a href="https://github.com/xBourner/calendar-card-plus">GitHub</a>
       </div>
+      <img class="card-tile__shot" src="img/cards/calendar/calendar-card-plus_extended.png" alt="Calendar Card Plus" loading="lazy">
     </div>
 
     <div class="card-tile reveal" style="transition-delay: 0.25s;">
@@ -110,6 +114,7 @@ hide:
         <a href="dynamic-grid-card/">Documentation</a>
         <a href="https://github.com/xBourner/dynamic-grid-card">GitHub</a>
       </div>
+      <img class="card-tile__shot" src="img/cards/grid/dynamic-grid.png" alt="Dynamic Grid Card" loading="lazy">
     </div>
 
     <div class="card-tile reveal" style="transition-delay: 0.3s;">
@@ -121,6 +126,7 @@ hide:
         <a href="server-card-plus/">Documentation</a>
         <a href="https://github.com/xBourner/server-card-plus">GitHub</a>
       </div>
+      <img class="card-tile__shot" src="img/cards/server/server-classic.png" alt="Server Card Plus" loading="lazy">
     </div>
   </div>
 </div>

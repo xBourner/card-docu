@@ -1,5 +1,20 @@
 ---
 title: Home
+hide:
+  - navigation
+  - toc
+product: Calendar Card Plus
+tagline: "Your day, CarPlay style."
+repo: https://github.com/xBourner/calendar-card-plus
+stage:
+  - src: img/cards/calendar/calendar-card-plus.png
+    alt: "Calendar Card Plus with the next event"
+    label: "Next event"
+    field: dark
+  - src: img/cards/calendar/calendar-card-plus_extended.png
+    alt: "Calendar Card Plus with several events"
+    label: "Several events"
+    field: dark
 ---
 
 # Calendar Card Plus
@@ -9,12 +24,6 @@ Assistant dashboards, inspired by the elegant calendar widget from Apple CarPlay
 
 It upgrades your dashboard with a clean, dynamic and intuitive view of your upcoming
 events – supporting multiple calendars simultaneously without the clutter.
-
-<p align="center">
-  <img width="49%" alt="Calendar Card View" src="https://raw.githubusercontent.com/xBourner/calendar-card-plus/main/.github/images/calendar-card-plus.png">
-&nbsp;
-  <img width="49%" alt="Calendar Popup View" src="https://raw.githubusercontent.com/xBourner/calendar-card-plus/main/.github/images/calendar-card-plus_extended.png">
-</p>
 
 ## Features
 

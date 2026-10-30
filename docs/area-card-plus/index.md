@@ -1,5 +1,28 @@
 ---
 title: Home
+hide:
+  - navigation
+  - toc
+product: Area Card Plus
+tagline: "A whole room in one card."
+repo: https://github.com/xBourner/area-card-plus
+stage:
+  - src: img/cards/area/area-single-light.png
+    alt: "Area Card Plus in the light theme"
+    label: "Light"
+    field: light
+  - src: img/cards/area/area-single-dark.png
+    alt: "Area Card Plus in the dark theme"
+    label: "Dark"
+    field: dark
+  - src: img/cards/area/area-vertical-light.png
+    alt: "Area Card Plus in the vertical layout"
+    label: "Vertical"
+    field: light
+  - src: img/cards/area/area-multi-dark-v2.png
+    alt: "Area Card Plus in the V2 design"
+    label: "V2"
+    field: dark
 ---
 
 # Area Card Plus
@@ -14,34 +37,6 @@ class right out of the box.
 !!! note "Areas first"
     To ensure the card works perfectly, verify that your relevant entities are
     correctly assigned to their areas and domains in Home Assistant.
-
-<p align="center">
-  <img width="49%" alt="Light Mode" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-single-light.png">
-&nbsp;
-  <img width="49%" alt="Dark Mode" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-single-dark.png">
-</p>
-
-<p align="center">
-  <img width="49%" alt="Multi Light" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-multi-light.png">
-&nbsp;
-  <img width="49%" alt="Multi Dark" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-multi-dark.png">
-</p>
-
-### Vertical mode
-
-<p align="center">
-  <img width="49%" alt="Vertical Light" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-vertical-light.png">
-&nbsp;
-  <img width="49%" alt="Vertical Dark" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-vertical-dark.png">
-</p>
-
-### V2 design
-
-<p align="center">
-  <img width="49%" alt="V2 Light" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-multi-light-v2.png">
-&nbsp;
-  <img width="49%" alt="V2 Dark" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-multi-dark-v2.png">
-</p>
 
 !!! info "Credit"
     This card is highly influenced by the fantastic

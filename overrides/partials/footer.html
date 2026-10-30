@@ -1,0 +1,47 @@
+{#- Footer: previous / next page, then a directory of every card -#}
+<footer class="md-footer rd-footer">
+  {% if "navigation.footer" in features and (page.previous_page or page.next_page) %}
+    {% set hidden = page.meta and page.meta.hide and "footer" in page.meta.hide %}
+    {% if not hidden %}
+      <nav class="rd-pager" aria-label="{{ lang.t('footer') }}">
+        {% if page.previous_page %}
+          <a href="{{ page.previous_page.url | url }}" class="rd-pager__link rd-pager__link--prev" rel="prev">
+            <span class="rd-pager__direction">{{ lang.t("footer.previous") }}</span>
+            <span class="rd-pager__title">{{ page.previous_page.title }}</span>
+          </a>
+        {% else %}<span></span>{% endif %}
+        {% if page.next_page %}
+          <a href="{{ page.next_page.url | url }}" class="rd-pager__link rd-pager__link--next" rel="next">
+            <span class="rd-pager__direction">{{ lang.t("footer.next") }}</span>
+            <span class="rd-pager__title">{{ page.next_page.title }}</span>
+          </a>
+        {% endif %}
+      </nav>
+    {% endif %}
+  {% endif %}
+  <div class="rd-directory">
+    <div class="rd-directory__inner">
+      <div class="rd-directory__grid">
+        {% for nav_item in nav.items %}
+          {% if nav_item.children and nav_item.children | length > 1 %}
+            <div class="rd-directory__column">
+              <p class="rd-directory__heading">{{ nav_item.title }}</p>
+              <ul>
+                {% for child in nav_item.children %}
+                  {% if child.title in ["Home", "Getting Started", "Installation", "Configuration", "Customization", "FAQ", "Release Notes"] %}
+                    {% set url = child.url if not child.children else (child.children | first).url %}
+                    <li><a href="{{ url | url }}">{{ "Overview" if child.title == "Home" and nav_item.title != "Home" else child.title }}</a></li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="rd-directory__legal">
+        {% include "partials/copyright.html" %}
+        {% include "partials/social.html" %}
+      </div>
+    </div>
+  </div>
+</footer>
