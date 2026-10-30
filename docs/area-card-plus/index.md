@@ -15,6 +15,14 @@ stage:
     alt: "Area Card Plus in the dark theme"
     label: "Dark"
     field: dark
+  - src: img/cards/area/area-vertical-light.png
+    alt: "Area Card Plus in the vertical layout"
+    label: "Vertical"
+    field: light
+  - src: img/cards/area/area-multi-dark-v2.png
+    alt: "Area Card Plus in the V2 design"
+    label: "V2"
+    field: dark
 ---
 
 # Area Card Plus
@@ -31,12 +39,6 @@ class right out of the box.
     correctly assigned to their areas and domains in Home Assistant.
 
 <p align="center">
-  <img width="49%" alt="Light Mode" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-single-light.png">
-&nbsp;
-  <img width="49%" alt="Dark Mode" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-single-dark.png">
-</p>
-
-<p align="center">
   <img width="49%" alt="Multi Light" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-multi-light.png">
 &nbsp;
   <img width="49%" alt="Multi Dark" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-multi-dark.png">
@@ -47,26 +49,7 @@ class right out of the box.
 <p align="center">
   <img width="49%" alt="Vertical Light" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-vertical-light.png">
 &nbsp;
-  <img width="49%" alt="Vertical Dark" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-vertical-dark.png">
-</p>
-
-### V2 design
-
-<p align="center">
-  <img width="49%" alt="V2 Light" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-multi-light-v2.png">
-&nbsp;
-  <img width="49%" alt="V2 Dark" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-multi-dark-v2.png">
-</p>
-
-!!! info "Credit"
-    This card is highly influenced by the fantastic
-    [Dwains Dashboard](https://github.com/dwainscheeren/dwains-lovelace-dashboard).
-    Now you can harness that great idea as a single, versatile card in any of your
-    dashboards.
-
-## Features
-
-- 🤖 **Zero-configuration magic** – automatically populated by just selecting an area.
+  <img width="49%" alt="Vertical Dark" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/cally populated by just selecting an area.
 - ✅ **Smart state filtering** – only shows entities that are currently in an "on" or
   active state.
 - 📚 **Dynamic grouping** – organizes your active entities by their `domain` or

@@ -843,6 +843,11 @@ body:has(.rd-hero) .md-content__inner {
   .rd-stage__card {
     max-width: 90%;
   }
+
+  .rd-switch button {
+    padding: 0 14px;
+    font-size: 13px;
+  }
 }
 
 /* Dynamic Grid: its idea as a working diagram */
