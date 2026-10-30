@@ -16,6 +16,7 @@
   --rd-radius: 18px;
   --rd-radius-sm: 12px;
   --rd-width: 980px;
+  --rd-bar-width: 56rem;     /* 1120px, grows with the theme's root size on large screens */
   --rd-text: 17px;
   --md-text-font: "Inter";
 }
@@ -117,9 +118,9 @@ input {
 }
 
 .rd-button--small {
-  min-height: 28px;
-  padding: 0 12px;
-  font-size: 12px;
+  min-height: 1.5rem;
+  padding: 0 0.65rem;
+  font-size: 0.65rem;
 }
 
 .rd-more {
@@ -149,7 +150,7 @@ input {
 }
 
 .rd-globalnav {
-  height: 48px;
+  height: 2.6rem;
   margin-top: 0 !important;
   background: var(--rd-nav) !important;
   color: var(--rd-nav-ink) !important;
@@ -167,10 +168,10 @@ body:has(.rd-localnav) .rd-globalnav {
   display: flex;
   align-items: center;
   gap: 8px;
-  max-width: var(--rd-width);
-  height: 48px;
+  max-width: var(--rd-bar-width);
+  height: 2.6rem;
   margin: 0 auto;
-  padding: 0 22px;
+  padding: 0 1.1rem;
 }
 
 .rd-globalnav__logo {
@@ -184,12 +185,12 @@ body:has(.rd-localnav) .rd-globalnav {
 }
 
 .rd-globalnav__logo img {
-  width: 22px !important;
-  height: 22px !important;
+  width: 1.2rem !important;
+  height: 1.2rem !important;
 }
 
 .rd-globalnav__name {
-  font-size: 14px;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
@@ -207,10 +208,10 @@ body:has(.rd-localnav) .rd-globalnav {
 .rd-globalnav__link {
   display: block;
   white-space: nowrap;
-  padding: 6px 10px;
+  padding: 0.3rem 0.55rem;
   border-radius: 8px;
   color: inherit !important;
-  font-size: 12.5px;
+  font-size: 0.7rem;
   opacity: 0.8;
   text-decoration: none !important;
   transition: opacity 200ms ease;
@@ -244,8 +245,8 @@ body:has(.rd-localnav) .rd-globalnav {
 }
 
 .rd-globalnav .md-header__button svg {
-  width: 18px;
-  height: 18px;
+  width: 1rem;
+  height: 1rem;
 }
 
 .rd-globalnav__menu {
@@ -260,8 +261,8 @@ body:has(.rd-localnav) .rd-globalnav {
 .rd-globalnav .md-search__button {
   width: auto !important;
   min-width: 0;
-  height: 32px;
-  padding: 0 8px !important;
+  height: 1.7rem;
+  padding: 0 0.4rem !important;
   background: transparent !important;
   color: inherit !important;
   font-size: 0 !important;
@@ -272,8 +273,8 @@ body:has(.rd-localnav) .rd-globalnav {
 .rd-globalnav .md-search__button::before {
   position: static !important;
   display: block;
-  width: 18px !important;
-  height: 18px !important;
+  width: 1rem !important;
+  height: 1rem !important;
   background-color: currentColor !important;
 }
 
@@ -320,7 +321,7 @@ body:has(.hero-section):not(.hero-highlight-visible) .rd-globalnav {
   position: sticky;
   top: 0;
   z-index: 90;
-  height: 52px;
+  height: 2.8rem;
   background: var(--rd-local);
   -webkit-backdrop-filter: saturate(180%) blur(20px); /* taste-skill-ignore: translucent nav bars are the brief */
   backdrop-filter: saturate(180%) blur(20px); /* taste-skill-ignore: translucent nav bars are the brief */
@@ -334,17 +335,17 @@ body:has(.hero-section):not(.hero-highlight-visible) .rd-globalnav {
 .rd-localnav__inner {
   display: flex;
   align-items: center;
-  gap: 24px;
-  max-width: var(--rd-width);
+  gap: 1.2rem;
+  max-width: var(--rd-bar-width);
   height: 100%;
   margin: 0 auto;
-  padding: 0 22px;
+  padding: 0 1.1rem;
 }
 
 .rd-localnav__title {
   flex: 1;
   color: var(--rd-ink) !important;
-  font-size: 21px;
+  font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   white-space: nowrap;
@@ -353,7 +354,7 @@ body:has(.hero-section):not(.hero-highlight-visible) .rd-globalnav {
 
 .rd-localnav__links {
   display: flex;
-  gap: 22px;
+  gap: 1.15rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -361,7 +362,7 @@ body:has(.hero-section):not(.hero-highlight-visible) .rd-globalnav {
 
 .rd-localnav__link {
   color: var(--rd-ink) !important;
-  font-size: 12.5px;
+  font-size: 0.68rem;
   opacity: 0.72;
   text-decoration: none !important;
   white-space: nowrap;
@@ -390,7 +391,7 @@ body:has(.hero-section):not(.hero-highlight-visible) .rd-globalnav {
 /* Sidebars sit below the sticky card bar */
 @media screen and (min-width: 76.25em) {
   body:has(.rd-localnav) .md-sidebar {
-    top: 52px;
+    top: 2.8rem;
   }
 }
 
