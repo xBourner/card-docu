@@ -1,0 +1,50 @@
+{#- Global navigation in the style of a product site: logo, one link per card, search, theme, source -#}
+<header class="md-header rd-globalnav" data-md-component="header">
+  <nav class="md-header__inner rd-globalnav__inner" aria-label="{{ lang.t('header') }}">
+    <label class="md-header__button md-icon rd-globalnav__menu" for="__drawer">
+      {% set icon = config.theme.icon.menu or "material/menu" %}
+      {% include ".icons/" ~ icon ~ ".svg" %}
+      <span class="md-visually-hidden">{{ lang.t('nav') }}</span>
+    </label>
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-header__button md-logo rd-globalnav__logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+      {% include "partials/logo.html" %}
+      <span class="rd-globalnav__name">{{ config.site_name }}</span>
+    </a>
+    <ul class="rd-globalnav__links">
+      {% for nav_item in nav.items %}
+        {% if nav_item.children %}
+          {% set first = nav_item.children | first %}
+          <li>
+            <a href="{{ first.url | url }}" class="rd-globalnav__link{% if nav_item.active %} rd-globalnav__link--active{% endif %}"{% if nav_item.active %} aria-current="true"{% endif %}>{{ nav_item.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <div class="rd-globalnav__tools">
+      {% if config.theme.palette %}
+        {% if not config.theme.palette is mapping %}
+          {% include "partials/palette.html" %}
+        {% endif %}
+      {% endif %}
+      {% if not config.theme.palette is mapping %}
+        {% include "partials/javascripts/palette.html" %}
+      {% endif %}
+      {% if "search" in config.plugins %}
+        {% set search = config.plugins["search"] | attr("config") %}
+        {% if search.enabled %}
+          <label class="md-header__button md-icon" for="__search">
+            {% set icon = config.theme.icon.search or "material/magnify" %}
+            {% include ".icons/" ~ icon ~ ".svg" %}
+            <span class="md-visually-hidden">{{ lang.t('search') }}</span>
+          </label>
+          {% include "partials/search.html" %}
+        {% endif %}
+      {% endif %}
+      {% if config.repo_url %}
+        <a href="{{ config.repo_url }}" class="md-header__button md-icon rd-globalnav__source" title="{{ config.repo_name }}" aria-label="{{ config.repo_name }}">
+          {% include ".icons/fontawesome/brands/github.svg" %}
+        </a>
+      {% endif %}
+    </div>
+  </nav>
+</header>

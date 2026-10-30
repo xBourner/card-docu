@@ -1,5 +1,16 @@
 ---
 title: Home
+hide:
+  - navigation
+  - toc
+product: Status Card
+tagline: "Everything that's on. At a glance."
+repo: https://github.com/xBourner/status-card
+stage:
+  - src: img/cards/status/status-card-light.png
+    alt: "Status Card in the light theme"
+  - src: img/cards/status/status-card-dark.png
+    alt: "Status Card in the dark theme"
 ---
 
 # Status Card

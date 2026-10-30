@@ -1,5 +1,16 @@
 ---
 title: Home
+hide:
+  - navigation
+  - toc
+product: Header Position Card
+tagline: "Navigation where your thumb is."
+repo: https://github.com/xBourner/header-position-card
+stage:
+  - src: img/cards/header/bottom-navbar.png
+    alt: "Navigation bar at the bottom of a dashboard"
+  - src: img/cards/header/navbar-alignment.png
+    alt: "Aligned navigation bar"
 ---
 
 # Header Position Card

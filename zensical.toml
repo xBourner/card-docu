@@ -4,8 +4,8 @@ site_description = "Documentation for the custom cards of xBourner for Home Assi
 site_url = "https://xbourner.github.io/card-docu/"
 repo_url = "https://github.com/xBourner/card-docu"
 repo_name = "xBourner/card-docu"
-extra_css = ["stylesheet/extra.css", "stylesheet/cards.css"]
-extra_javascript = ["javascripts/hero-animation.js"]
+extra_css = ["stylesheet/extra.css", "stylesheet/cards.css", "stylesheet/redesign.css"]
+extra_javascript = ["javascripts/hero-animation.js", "javascripts/redesign.js"]
 copyright = "Copyright &copy; <script>document.write(new Date().getFullYear())</script> xBourner"
 
 # Navigation with keys for translation

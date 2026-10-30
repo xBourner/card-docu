@@ -1,5 +1,21 @@
 {% extends "base.html" %}
 
+{% block fonts %}
+{{ super() }}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap"> {# taste-skill-ignore: the site's incumbent typeface #}
+{% endblock %}
+
+{# Card start pages and docs pages: card navigation, then the product hero on start pages #}
+{% block hero %}
+{% if not (page.url == "" or page.is_homepage) and page.ancestors %}
+  {% include "partials/localnav.html" %}
+  {% if page.meta.product %}
+    {% include "partials/product-hero.html" %}
+  {% endif %}
+{% endif %}
+{% endblock %}
+
 
 {% block tabs %}
 {{ super() }}

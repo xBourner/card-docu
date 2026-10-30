@@ -1,5 +1,16 @@
 ---
 title: Home
+hide:
+  - navigation
+  - toc
+product: Calendar Card Plus
+tagline: "Your day, CarPlay style."
+repo: https://github.com/xBourner/calendar-card-plus
+stage:
+  - src: img/cards/calendar/calendar-card-plus.png
+    alt: "Calendar Card Plus with the next event"
+  - src: img/cards/calendar/calendar-card-plus_extended.png
+    alt: "Calendar Card Plus with several events"
 ---
 
 # Calendar Card Plus

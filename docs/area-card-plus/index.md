@@ -1,5 +1,16 @@
 ---
 title: Home
+hide:
+  - navigation
+  - toc
+product: Area Card Plus
+tagline: "A whole room in one card."
+repo: https://github.com/xBourner/area-card-plus
+stage:
+  - src: img/cards/area/area-single-light.png
+    alt: "Area Card Plus in the light theme"
+  - src: img/cards/area/area-single-dark.png
+    alt: "Area Card Plus in the dark theme"
 ---
 
 # Area Card Plus

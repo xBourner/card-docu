@@ -1,0 +1,47 @@
+{#- Product hero of a card start page, filled from the page's front matter -#}
+{% set top = page.ancestors | last %}
+{% set _ = namespace(start = none) %}
+{% for child in top.children %}
+  {% if child.title == "Getting Started" %}{% set _.start = child.url %}{% endif %}
+{% endfor %}
+<section class="rd-hero" data-rd-hero>
+  <div class="rd-hero__copy">
+    <h1 class="rd-hero__title">{{ page.meta.product }}</h1>
+    <p class="rd-hero__tagline">{{ page.meta.tagline }}</p>
+    <div class="rd-hero__actions">
+      {% if _.start %}<a class="rd-button" href="{{ _.start | url }}">Get started</a>{% endif %}
+      {% if page.meta.repo %}<a class="rd-more" href="{{ page.meta.repo }}">View on GitHub</a>{% endif %}
+    </div>
+  </div>
+  <figure class="rd-stage" data-rd-stage>
+    <video class="rd-stage__media" muted loop playsinline preload="metadata" aria-hidden="true"
+      data-desktop="{{ 'img/blue_desktop.mp4' | url }}" data-mobile="{{ 'img/blue_mobile.mp4' | url }}"></video>
+    {% if page.meta.stage_demo == "grid" %}
+      {#- Dynamic Grid: its idea as a working diagram. One module hides, the others take its space. -#}
+      <div class="rd-stage__cards">
+        <div class="rd-griddemo" role="img" aria-label="Three columns of modules; when the media player has nothing to show, the modules around it grow into the free space">
+          <div class="rd-griddemo__col">
+            <div class="rd-griddemo__mod" style="--g:2">Weather</div>
+            <div class="rd-griddemo__mod rd-griddemo__mod--smart" style="--g:1">Person</div>
+          </div>
+          <div class="rd-griddemo__col">
+            <div class="rd-griddemo__mod rd-griddemo__mod--smart" style="--g:1">Calendar</div>
+            <div class="rd-griddemo__mod rd-griddemo__mod--hides" style="--g:1">Media player</div>
+            <div class="rd-griddemo__mod" style="--g:1">Lights</div>
+          </div>
+          <div class="rd-griddemo__col">
+            <div class="rd-griddemo__mod rd-griddemo__mod--smart" style="--g:1">Security</div>
+            <div class="rd-griddemo__mod" style="--g:2">Map</div>
+          </div>
+        </div>
+      </div>
+    {% else %}
+      {% set shots = page.meta.stage or [] %}
+      <div class="rd-stage__cards rd-stage__cards--{{ shots | length }}">
+        {% for shot in shots %}
+          <img class="rd-stage__card" src="{{ shot.src | url }}" alt="{{ shot.alt }}" loading="eager">
+        {% endfor %}
+      </div>
+    {% endif %}
+  </figure>
+</section>

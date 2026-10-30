@@ -1,5 +1,16 @@
 ---
 title: Home
+hide:
+  - navigation
+  - toc
+product: Server Card Plus
+tagline: "Your Proxmox, live."
+repo: https://github.com/xBourner/server-card-plus
+stage:
+  - src: img/cards/server/server-classic.png
+    alt: "Server Card Plus in the classic design"
+  - src: img/cards/server/server-rack.png
+    alt: "Server Card Plus in the rack design"
 ---
 
 # Server Card Plus
