@@ -25,12 +25,6 @@ Assistant dashboards, inspired by the elegant calendar widget from Apple CarPlay
 It upgrades your dashboard with a clean, dynamic and intuitive view of your upcoming
 events – supporting multiple calendars simultaneously without the clutter.
 
-<p align="center">
-  <img width="49%" alt="Calendar Card View" src="https://raw.githubusercontent.com/xBourner/calendar-card-plus/main/.github/images/calendar-card-plus.png">
-&nbsp;
-  <img width="49%" alt="Calendar Popup View" src="https://raw.githubusercontent.com/xBourner/calendar-card-plus/main/.github/images/calendar-card-plus_extended.png">
-</p>
-
 ## Features
 
 - 🍎 **Apple CarPlay aesthetics** – a sleek, modern design with dynamic, localized
