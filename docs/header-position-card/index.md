@@ -30,14 +30,6 @@ much better overall dashboard experience.
 up with the original idea. I applied several modifications and a GUI editor to make it
 significantly easier and more robust to work with.)*
 
-<p align="center">
-  <img alt="Bottom Navigation Bar" src="https://github.com/user-attachments/assets/4d18ce72-8791-4a8a-99b4-b978b5f5afe2">
-</p>
-
-<p align="center">
-  <img alt="Navbar Alignment" src="https://github.com/user-attachments/assets/d1347392-0844-457e-9f36-f177f411e76c">
-</p>
-
 ## Features
 
 - 📱 **Device-specific positioning** – move the header to the bottom only for selected
