@@ -38,18 +38,15 @@ class right out of the box.
     To ensure the card works perfectly, verify that your relevant entities are
     correctly assigned to their areas and domains in Home Assistant.
 
-<p align="center">
-  <img width="49%" alt="Multi Light" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-multi-light.png">
-&nbsp;
-  <img width="49%" alt="Multi Dark" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-multi-dark.png">
-</p>
+!!! info "Credit"
+    This card is highly influenced by the fantastic
+    [Dwains Dashboard](https://github.com/dwainscheeren/dwains-lovelace-dashboard).
+    Now you can harness that great idea as a single, versatile card in any of your
+    dashboards.
 
-### Vertical mode
+## Features
 
-<p align="center">
-  <img width="49%" alt="Vertical Light" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-vertical-light.png">
-&nbsp;
-  <img width="49%" alt="Vertical Dark" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/cally populated by just selecting an area.
+- 🤖 **Zero-configuration magic** – automatically populated by just selecting an area.
 - ✅ **Smart state filtering** – only shows entities that are currently in an "on" or
   active state.
 - 📚 **Dynamic grouping** – organizes your active entities by their `domain` or

@@ -40,6 +40,14 @@ The camera display types are explained in [Camera](camera.md).
   <img width="49%" alt="V2 Design" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-multi-light-v2.png">
 </p>
 
+## Several areas
+
+<p align="center">
+  <img width="49%" alt="Multi Light" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-multi-light.png">
+&nbsp;
+  <img width="49%" alt="Multi Dark" src="https://raw.githubusercontent.com/xbourner/area-card-plus/main/.github/img/area-multi-dark.png">
+</p>
+
 ## Vertical mode
 
 <p align="center">
