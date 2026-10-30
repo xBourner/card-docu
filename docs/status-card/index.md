@@ -31,12 +31,6 @@ assign your devices to areas and let the card handle the rest.
     The card is based on your Home Assistant areas. Assign your relevant devices
     and entities to their **areas** beforehand for the card to work.
 
-<p align="center">
-  <img width="49%" alt="Status Card light theme" src="./img/status-card-light.png">
-&nbsp;
-  <img width="49%" alt="Status Card dark theme" src="./img/status-card-dark.png">
-</p>
-
 ## Features
 
 - 🪄 **Zero-configuration magic** – automatically built from the entities and devices
