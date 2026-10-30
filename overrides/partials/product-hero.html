@@ -13,13 +13,12 @@
       {% if page.meta.repo %}<a class="rd-more" href="{{ page.meta.repo }}">View on GitHub</a>{% endif %}
     </div>
   </div>
-  <figure class="rd-stage" data-rd-stage>
-    <video class="rd-stage__media" muted loop playsinline preload="metadata" aria-hidden="true"
-      data-desktop="{{ 'img/blue_desktop.mp4' | url }}" data-mobile="{{ 'img/blue_mobile.mp4' | url }}"></video>
-    {% if page.meta.stage_demo == "grid" %}
-      {#- Dynamic Grid: its idea as a working diagram. One module hides, the others take its space. -#}
+
+  {% if page.meta.stage_demo == "grid" %}
+    {#- Dynamic Grid: its idea as a working diagram. The switch hides the media player; the column closes the gap. -#}
+    <figure class="rd-stage" data-rd-stage data-field="dark">
       <div class="rd-stage__cards">
-        <div class="rd-griddemo" role="img" aria-label="Three columns of modules; when the media player has nothing to show, the modules around it grow into the free space">
+        <div class="rd-griddemo" data-rd-griddemo role="img" aria-label="Three columns of modules; when the media player has nothing to show, the modules around it grow into the free space">
           <div class="rd-griddemo__col">
             <div class="rd-griddemo__mod" style="--g:2">Weather</div>
             <div class="rd-griddemo__mod rd-griddemo__mod--smart" style="--g:1">Person</div>
@@ -35,13 +34,27 @@
           </div>
         </div>
       </div>
-    {% else %}
-      {% set shots = page.meta.stage or [] %}
-      <div class="rd-stage__cards rd-stage__cards--{{ shots | length }}">
+    </figure>
+    <div class="rd-switch" role="radiogroup" aria-label="Media player">
+      <button type="button" role="radio" aria-checked="true" data-rd-grid="playing">Media playing</button>
+      <button type="button" role="radio" aria-checked="false" data-rd-grid="idle">Nothing playing</button>
+    </div>
+  {% else %}
+    {% set shots = page.meta.stage or [] %}
+    {% set first = shots | first %}
+    <figure class="rd-stage" data-rd-stage data-field="{{ first.field or 'light' }}">
+      <div class="rd-stage__cards">
         {% for shot in shots %}
-          <img class="rd-stage__card" src="{{ shot.src | url }}" alt="{{ shot.alt }}" loading="eager">
+          <img class="rd-stage__card{% if loop.first %} is-active{% endif %}" src="{{ shot.src | url }}" alt="{{ shot.alt }}" data-field="{{ shot.field or 'light' }}"{% if not loop.first %} aria-hidden="true"{% endif %}>
+        {% endfor %}
+      </div>
+    </figure>
+    {% if shots | length > 1 %}
+      <div class="rd-switch" role="radiogroup" aria-label="{{ page.meta.product }} views">
+        {% for shot in shots %}
+          <button type="button" role="radio" aria-checked="{{ 'true' if loop.first else 'false' }}" data-rd-show="{{ loop.index0 }}">{{ shot.label }}</button>
         {% endfor %}
       </div>
     {% endif %}
-  </figure>
+  {% endif %}
 </section>

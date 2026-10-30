@@ -9,8 +9,12 @@ repo: https://github.com/xBourner/status-card
 stage:
   - src: img/cards/status/status-card-light.png
     alt: "Status Card in the light theme"
+    label: "Light"
+    field: light
   - src: img/cards/status/status-card-dark.png
     alt: "Status Card in the dark theme"
+    label: "Dark"
+    field: dark
 ---
 
 # Status Card

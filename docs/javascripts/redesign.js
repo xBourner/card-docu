@@ -14,18 +14,10 @@
     );
   }
 
-  // --- Product hero stage: the framed video opens to the full width while scrolling ---
+  // --- Product hero stage: the framed field opens to the full width while scrolling ---
   const stage = document.querySelector("[data-rd-stage]");
   if (stage) {
-    const video = stage.querySelector("video");
     const cards = stage.querySelector(".rd-stage__cards");
-    const mobile = window.matchMedia("(max-width: 767px)").matches;
-    video.src = mobile ? video.dataset.mobile : video.dataset.desktop;
-    if (!reduce) {
-      video.autoplay = true;
-      // The loop only runs while the stage is on screen
-      new IntersectionObserver(([e]) => (e.isIntersecting ? video.play().catch(() => {}) : video.pause())).observe(stage);
-    }
     stage.addEventListener("animationend", () => (stage.style.animation = "none"), { once: true });
 
     if (!reduce) {
@@ -41,6 +33,40 @@
         cards.style.setProperty("--rd-cards-s", `${0.94 + 0.06 * ease}`);
       });
     }
+  }
+
+  // --- Switch under the stage: one view at a time, the field follows the view ---
+  const sw = document.querySelector(".rd-switch");
+  if (sw && stage) {
+    const buttons = [...sw.querySelectorAll("button")];
+    const shots = [...stage.querySelectorAll(".rd-stage__card")];
+    const demo = stage.querySelector("[data-rd-griddemo]");
+    sw.style.setProperty("--n", buttons.length);
+    const select = (i, focus) => {
+      buttons.forEach((b, j) => {
+        b.setAttribute("aria-checked", String(j === i));
+        b.tabIndex = j === i ? 0 : -1;
+      });
+      sw.style.setProperty("--i", i);
+      if (shots.length) {
+        shots.forEach((img, j) => {
+          img.classList.toggle("is-active", j === i);
+          img.setAttribute("aria-hidden", String(j !== i));
+        });
+        stage.dataset.field = shots[i].dataset.field;
+      }
+      if (demo) demo.classList.toggle("is-idle", buttons[i].dataset.rdGrid === "idle");
+      if (focus) buttons[i].focus();
+    };
+    buttons.forEach((b, i) => b.addEventListener("click", () => select(i)));
+    sw.addEventListener("keydown", (e) => {
+      const i = buttons.findIndex((b) => b.getAttribute("aria-checked") === "true");
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") select((i + 1) % buttons.length, true);
+      else if (e.key === "ArrowLeft" || e.key === "ArrowUp") select((i - 1 + buttons.length) % buttons.length, true);
+      else return;
+      e.preventDefault();
+    });
+    select(0);
   }
 
   const product = document.querySelector(".rd-hero");

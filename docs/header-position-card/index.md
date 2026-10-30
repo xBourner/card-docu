@@ -9,8 +9,12 @@ repo: https://github.com/xBourner/header-position-card
 stage:
   - src: img/cards/header/bottom-navbar.png
     alt: "Navigation bar at the bottom of a dashboard"
+    label: "At the bottom"
+    field: light
   - src: img/cards/header/navbar-alignment.png
     alt: "Aligned navigation bar"
+    label: "Aligned"
+    field: light
 ---
 
 # Header Position Card

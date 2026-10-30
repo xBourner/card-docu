@@ -9,8 +9,12 @@ repo: https://github.com/xBourner/server-card-plus
 stage:
   - src: img/cards/server/server-classic.png
     alt: "Server Card Plus in the classic design"
+    label: "Classic"
+    field: dark
   - src: img/cards/server/server-rack.png
     alt: "Server Card Plus in the rack design"
+    label: "Rack"
+    field: dark
 ---
 
 # Server Card Plus

@@ -9,8 +9,12 @@ repo: https://github.com/xBourner/area-card-plus
 stage:
   - src: img/cards/area/area-single-light.png
     alt: "Area Card Plus in the light theme"
+    label: "Light"
+    field: light
   - src: img/cards/area/area-single-dark.png
     alt: "Area Card Plus in the dark theme"
+    label: "Dark"
+    field: dark
 ---
 
 # Area Card Plus

@@ -9,8 +9,12 @@ repo: https://github.com/xBourner/calendar-card-plus
 stage:
   - src: img/cards/calendar/calendar-card-plus.png
     alt: "Calendar Card Plus with the next event"
+    label: "Next event"
+    field: dark
   - src: img/cards/calendar/calendar-card-plus_extended.png
     alt: "Calendar Card Plus with several events"
+    label: "Several events"
+    field: dark
 ---
 
 # Calendar Card Plus
